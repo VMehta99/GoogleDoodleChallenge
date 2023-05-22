@@ -1,5 +1,6 @@
 import express from 'express'
 import {getRandomDoodleList} from './services/doodleService.js'
+const path = require('path');
 const app = express(); // create express app
 
 app.use(express.static(path.join(__dirname, 'client/build')))
