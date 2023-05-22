@@ -2,7 +2,7 @@ import express from 'express'
 import {getRandomDoodleList} from './services/doodleService.js'
 const app = express(); // create express app
 
-app.use(express.static(path.join(__dirname, 'client/public')))
+app.use(express.static(path.join(__dirname, 'client/build')))
 
 app.get("/image", (req,res)=>{
    getRandomDoodleList().then(data=>{
@@ -12,7 +12,7 @@ app.get("/image", (req,res)=>{
 
 // Anything that doesn't match the above, send back the index.html file
 app.get('*', (req, res) => {
-   res.sendFile(path.join(__dirname + '/client/public/index.html'))
+   res.sendFile(path.join(__dirname + '/client/build/index.html'))
  })
 
 // Choose the port and start the server
