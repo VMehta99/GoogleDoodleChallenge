@@ -1,0 +1,58 @@
+.doodle{
+   text-align: center;
+   width: 50%;
+   height: 25%;
+}
+
+img {
+   max-width: 100%;
+   max-height: 100%;
+}
+
+.gameContainer{
+   width: 100%;
+   display: flex;
+   height: 100vh;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}
+
+.optionsGrid{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 50%;
+   margin-top: 1%;
+   flex-direction: column;
+}
+
+.correctAnswer{
+   color: tomato;
+   font-size: 20px;
+}
+
+.streakCounter{
+   font-size: 20px;
+   font-weight: bold;
+   position: absolute;
+   top:5%;
+   right: 5%;
+   color: gray;;
+}
+
+.title{
+   position: absolute;
+   top: 5%;
+   left: 5%;
+   font-weight: bold;
+   font-size: 25px;
+   width: 25px;
+   color: #b7b3b3;
+}
+
+.subTitle{
+   font-size: 12px;
+   color: gray;
+   text-decoration: none;
+}
