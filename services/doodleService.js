@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+const fetch = require('cross-fetch');
 const starting_doodle_year = 2000;
 
 async function getDoodleJson(year, month) {
@@ -8,7 +8,7 @@ async function getDoodleJson(year, month) {
    return data;
 }
 
-export async function getRandomDoodle() {
+async function getRandomDoodle() {
    var thisYear = new Date().getFullYear();
    let randomYear = randomNumber(thisYear, starting_doodle_year);
    let randomMonth = randomNumber(1, 12);
@@ -36,7 +36,7 @@ function getSearchLink(doodle) {
    return 'https://www.google.com/search?q=' + doodle["title"].split(" ").join("+")
 }
 
-export async function getRandomDoodleList(numberOfDoodles=2) {
+module.exports.getRandomDoodleList =  async function getRandomDoodleList(numberOfDoodles=2) {
    let correct_doodle = await getRandomDoodle();
    let incorrect_doodles = [];
    for(let i=0;i<=numberOfDoodles;i++){
